@@ -18,11 +18,10 @@ function theme_enqueue_scripts() {
         wp_enqueue_script( 'Tether', get_template_directory_uri() . '/js/popper.min.js', array(), '1.0.0', true );
         wp_enqueue_script( 'Bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '1.0.0', true );
         wp_enqueue_script( 'MDB', get_template_directory_uri() . '/js/mdb.min.js', array(), '1.0.0', true );
-
+        wp_enqueue_script( 'Custom', get_template_directory_uri() . '/js/app.js', array(), '1.0.0', true );
         }
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
-
 
 /**
  * Setup Theme
@@ -41,11 +40,24 @@ function mdb_widgets_init() {
   register_sidebar( array(
     'name'          => 'Sidebar',
     'id'            => 'sidebar',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
-  ) );
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget'  => '</div><hr>',
+    'before_title'  => '<h5 class="widget-title">',
+    'after_title'   => '</h5>',
+  ));
+
+  register_sidebar( array(
+    'name'          => 'Videos',
+    'id'            => 'videos',
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h5 class="widget-title">',
+    'after_title'   => '</h5>',
+  ));
+
+
+    include_once ( get_template_directory().'/components/videos.inc.php' );
+    register_widget( 'SMT_VideoFeed' );
 
 }
 add_action( 'widgets_init', 'mdb_widgets_init' );
