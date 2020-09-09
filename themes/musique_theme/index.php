@@ -1,64 +1,35 @@
-<?php  get_header(); 
+<?php  get_header();
 require_once('components/navbar.inc.php'); ?>
 
-    <!--Main Navigation-->
-    <header>
-
-        <!-- Intro -->
-        <div class="card card-intro blue-gradient mb-4">
-
-            <div class="card-body white-text rgba-black-light text-center pt-5 pb-4">
-
-                <!--Grid row-->
-                <div class="row d-flex justify-content-center">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-
-                        <h1 class="font-weight-bold mb-4">Website Name</h1>
-                        <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ad impedit corporis ratione facere?
-                            Cupiditate unde aliquid reiciendis animi, quas inventore, praesentium neque voluptatem, iusto
-                            perferendis placeat similique dolor eum?
-                        </p>
-
-                    </div>
-                    <!--Grid column-->
-
+<header>
+    <div class="card card-intro blue-gradient mb-4">
+        <div class="card-body white-text rgba-black-light text-center pt-5 pb-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="font-weight-bold mb-4">Website Name</h1>
+                    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ad impedit corporis ratione facere?
+                        Cupiditate unde aliquid reiciendis animi, quas inventore, praesentium neque voluptatem, iusto
+                        perferendis placeat similique dolor eum?
+                    </p>
                 </div>
-                <!--Grid row-->
-
             </div>
-
         </div>
-        <!-- Intro -->
+    </div>
+</header>
 
-    </header>
-    <!--Main Navigation-->
+<main>
+    <div class="container">
 
-    <!--Main layout-->
-    <main>
-        <div class="container">
+        <section>
+          <div id="dynamic-content"></div>
+      </section>
 
-            <!--Section: Dynamic Content Wrapper-->
-            <section>
-              <div id="dynamic-content"></div>
+      <section class="text-center">
 
-            </section>
-            <!--Section: Dynamic Content Wrapper-->
+        <h1 class="h2 font-weight-bold my-4">Recent articles</h1>
 
-            <!--Section: Articles-->
-            <section class="text-center">
-
-                <!--Section heading-->
-                <h1 class="h2 font-weight-bold my-4">Recent articles</h1>
-                <!--Grid row-->
-                <div class="row wow fadeIn">
-                <?php
-                if ( have_posts() ) {
-                $counter = 1;
-                while ( have_posts() ) {
-                the_post();
-                ?>
+        <div class="row wow fadeIn">
+            <?php if (have_posts()): $counter = 1; while (have_posts()): the_post(); ?>
 
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-4">
@@ -82,35 +53,30 @@ require_once('components/navbar.inc.php'); ?>
                         </h4>
                         <p>by
                             <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a>, <?php echo get_the_date(); ?></p>
-                        <p class="grey-text"><?php the_excerpt(); ?></p>
-                        <a href="<?php echo get_permalink() ?>" class="btn btn-info btn-rounded btn-md">Read more</a>
-                    </div>
-                    <!--Grid column-->
+                            <p class="grey-text"><?php the_excerpt(); ?></p>
+                            <a href="<?php echo get_permalink() ?>" class="btn btn-info btn-rounded btn-md">Read more</a>
+                        </div>
+                        <!--Grid column-->
 
-                  <?php
-                  if ($counter % 3 == 0) { 
-                  ?>
-                  </div>
-                  <!--Grid row-->
-                  <!--Grid dynamic row-->
-                  <div class="row wow fadeIn">
-                  <?php
-                  }
-                  $counter++;                  
-                  } // end while
-                  } // end if
-                  ?>
-                  </div>
-                  <!--Grid row-->
+                        <?php if ($counter % 3 == 0):?>
+                      </div>
+                      <!--Grid row-->
+                      <!--Grid dynamic row-->
+                      <div class="row wow fadeIn">
+                        <?php endif; ?>
+                        <?php $counter++; ?>
+                  <?php endwhile; endif; ?>
+              </div>
+              <!--Grid row-->
 
-                  <?php mdb_pagination(); ?>
+              <?php mdb_pagination(); ?>
 
 
-            </section>
-            <!--Section: Articles-->
+          </section>
+          <!--Section: Articles-->
 
-        </div>
-    </main>
-    <!--Main layout-->
+      </div>
+  </main>
+  <!--Main layout-->
 
-<?php  get_footer(); ?>
+  <?php  get_footer(); ?>
