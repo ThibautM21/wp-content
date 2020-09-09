@@ -32,3 +32,11 @@ Author URI: https://musique.com
 
 .card-avatar img {
   width: 100px; }
+
+.admin-bar .navbar {
+	top: 32px;
+}
+
+body {
+	padding-top: 32px;
+}
