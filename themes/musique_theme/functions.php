@@ -62,4 +62,10 @@ function mdb_widgets_init() {
 }
 add_action( 'widgets_init', 'mdb_widgets_init' );
 
+// Add SoundCloud oEmbed
+function add_oembed_soundcloud(){
+    wp_oembed_add_provider( 'http://soundcloud.com/*', 'http://soundcloud.com/oembed' );
+}
+add_action('init','add_oembed_soundcloud');
+
 ?>

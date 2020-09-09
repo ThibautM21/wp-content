@@ -40,10 +40,6 @@ Author URI: https://musique.com
 	top: 32px;
 }
 
-body {
-	padding-top: 32px;
-}
-
 /* Front page */
 .carousel-inner, .carousel-item {
   max-height: 400px;
@@ -54,7 +50,8 @@ body {
 }
 
 .carousel-caption {
-  top: 50%;
+  top: 35%;
+  bottom: 35%;
 }
 
 .card-index {
@@ -82,28 +79,105 @@ body {
   color: white;
 }
 
-.widget_smt_videofeed  {
-  height: 360px;
+.video-player {
+  padding: 20px;
+  display: flex;
 }
 
-.widget_smt_videofeed + .row {
-  height: 100%;
+.video_frame_left, .video_frame_right {
+	width: 50%;
 }
 
-.widget_smt_videofeed ul {
-  padding: 0;
-  height: 360px;
-  margin: 0;
+.video_frame_left iframe {
+	width: 100%;
+	min-height: 360px;
 }
 
-.video_frame_right,.video_frame_right img, .video_frame_right ul li {
-  height: 120px;
+.video_frame_right{
+	margin-left: 20px;
+}
+.video_frame_right ul {
+	padding-left: 0;
+	margin-top: 20px;
 }
 
-.widget_smt_videofeed li {
-  list-style: none;
+.video_frame_right ul li {
+	list-style: none;
+	width: 100%;
 }
 
-.videos {
- background-color: rgb(200,200,200);
+.video_frame_right ul li .crop {
+	width: 25%;
+	max-height:	100px;
+	overflow: hidden;
+}
+
+.crop img {
+	width: 100%;
+	height: 120px;
+	transform: scale(1.5);
+}
+
+.video_frame_title {
+	font-size: 16px;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	z-index: 5;
+	background-color: white;
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.video_frame_title span {
+	background-color: white;
+	z-index: 10;
+	position: relative;
+	margin-right: 10px;
+}
+
+.video_title {
+	text-align: left;
+	color: #212121;
+	margin-left: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	width: 50%;
+}
+
+.video_frame_title::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	background-color: #ddd;
+	width: 100%;
+	height: 1px;
+	z-index: 0;
+}
+
+.video_left_subtitle {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.video_left_subtitle a {
+	color: #212121;
+	text-decoration: none;
+}
+
+.carousel-caption {
+	border: 1px solid #ddd;
+}
+
+.carousel-caption a h3 {
+	color: white;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.carousel-caption a p {
+	color: white;
+	margin-bottom: 0;
 }

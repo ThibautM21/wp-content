@@ -1,8 +1,8 @@
 <?php $the_query = new WP_Query($args); ?>
 
 <div class="row wow fadeIn">
-	<?php if ($the_query->have_posts()): $counter = 1; while ($the_query->have_posts() && $counter < 6): $the_query->the_post(); ?>
-		<div class="col-lg-4 col-md-6 col-12 mb-4 p-2">
+	<?php if ($the_query->have_posts()): $counter = 1; while ($the_query->have_posts() && $counter <= $args['posts_per_page']): $the_query->the_post(); ?>
+		<div class="col-lg-<?=24/$args['posts_per_page']?> col-12 mb-4 p-2">
 			<div class="card card-cascade card-index">
 				<div class="view view-cascade overlay hm-white-slight mb-4">
 					<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'img-fluid card-img-top')); ?>
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-	<?php if ($counter % 3 == 0):?>
+	<?php if ($counter % ($args['posts_per_page']/2) == 0):?>
 		</div>
 		<div class="row wow fadeIn">
 	<?php endif; ?>

@@ -1,6 +1,6 @@
 <!--Footer-->
 <footer class="page-footer text-center font-small mt-4 wow bg-dark fadeIn">
-    <div class=row>
+    <div class="row">
         <div class="col-lg-4 pt-5">
             <h2 class="mb-4">Coordonnées</h2>
             <address>
@@ -51,3 +51,8 @@
     <div class="py-3">
        AlloMusic © 2020 Copyright    
     </div>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>
