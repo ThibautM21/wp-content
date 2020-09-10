@@ -50,7 +50,7 @@
 	<hr>
 
 	<section class="text-center bg-dark container-fluid concerts">
-		<div class="row justify-content-center">
+		<div class="row justify-content-center flex-column">
 			<h2 class="cat-title text-white my-4">Prochains concerts</h2>
 			<?php if ( is_active_sidebar('concerts')): ?>
 				<?php dynamic_sidebar('concerts'); ?>

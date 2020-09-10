@@ -60,7 +60,7 @@ function mdb_widgets_init() {
     'id'            => 'concerts',
     'before_widget' => '<div class="widget %2$s">',
     'after_widget'  => '</div>',
-    'before_title'  => '<h5 class="widget-title">',
+    'before_title'  => '<h5 class="d-none">',
     'after_title'   => '</h5>',
   ));
 

@@ -200,3 +200,43 @@ Author URI: https://musique.com
 .concerts {
 	margin: 0;
 }
+
+/* Calendar widget */
+.tribe-event-image a img {
+	max-width: 75px;
+	height: auto;
+}
+
+.tribe-events-list-widget-events {
+	display: flex;
+	color: white;
+}
+
+.tribe-event-title a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tribe-event-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	margin-left: 15px;
+	font-size: 18px;
+}
+
+.tribe-event-title .tribe-event-duration {
+	font-size: 14px;
+}
+
+.tribe-events-widget-link a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tribe-events-list-widget {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
