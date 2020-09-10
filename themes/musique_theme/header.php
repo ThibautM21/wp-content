@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/navbar.css" type="text/css">
     <title>
         <?php wp_title() ?>
     </title>
@@ -19,7 +18,7 @@
       <div class="navbar-brand"><i class="fa fa-headphones fa-2x"></i> AlloMusic</div>
 
       <!-- Boutton en responsive  -->
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarText">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#header-menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
