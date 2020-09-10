@@ -14,7 +14,7 @@ use Tribe__Date_Utils as Dates;
 
 class Tribe__Events__List_Widget extends WP_Widget {
 
-	private static $limit = 5;
+	private static $limit = 8;
 	public static $posts = array();
 
 	/**
@@ -126,7 +126,7 @@ class Tribe__Events__List_Widget extends WP_Widget {
 
 		self::$limit = absint( $limit );
 
-		if ( ! function_exists( 'tribe_get_events' ) ) {
+		if (! function_exists( 'tribe_get_events' ) ) {
 			return;
 		}
 
@@ -249,7 +249,7 @@ class Tribe__Events__List_Widget extends WP_Widget {
 
 		return wp_parse_args( $instance, array(
 			'title'                => esc_html__( 'Upcoming Events', 'the-events-calendar' ),
-			'limit'                => '5',
+			'limit'                => '8',
 			'no_upcoming_events'   => false,
 			'featured_events_only' => false,
 			'jsonld_enable'        => true,

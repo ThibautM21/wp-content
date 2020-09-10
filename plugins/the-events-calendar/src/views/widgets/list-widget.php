@@ -29,6 +29,7 @@ $events_label_plural = tribe_get_event_label_plural();
 $events_label_plural_lowercase = tribe_get_event_label_plural_lowercase();
 
 $posts = tribe_get_list_widget_events();
+echo count($posts);
 
 // Check if any event posts are found.
 if ( $posts ) : ?>
