@@ -55,6 +55,14 @@ function mdb_widgets_init() {
     'after_title'   => '</h5>',
   ));
 
+  register_sidebar( array(
+    'name'          => 'Concerts',
+    'id'            => 'concerts',
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h5 class="widget-title">',
+    'after_title'   => '</h5>',
+  ));
 
     include_once ( get_template_directory().'/components/videos.inc.php' );
     register_widget( 'SMT_VideoFeed' );

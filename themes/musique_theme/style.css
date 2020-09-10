@@ -181,3 +181,22 @@ Author URI: https://musique.com
 	color: white;
 	margin-bottom: 0;
 }
+
+.cat-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.cat-title::after {
+	content: '';
+	width: 50px;
+	height: 1px;
+	display: block;
+	background-color: rgb(120,120,120);
+	margin: 10px auto;
+}
+
+.concerts {
+	margin: 0;
+}
