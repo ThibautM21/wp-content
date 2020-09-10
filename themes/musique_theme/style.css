@@ -43,9 +43,9 @@ Author URI: https://musique.com
 	height: 20px;
 }
 
-/*.pagination .page-item.active .page-link {
-	background-color: #09c;
-}*/
+body {
+	padding-top: 68px;
+}
 
 .card-avatar img {
 	width: 100px;
