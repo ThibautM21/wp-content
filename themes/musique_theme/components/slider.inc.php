@@ -9,9 +9,11 @@
     				<img class="d-block w-100 img-fluid" src="<?php echo get_the_post_thumbnail_url(get_the_id()); ?>">
     				<div class="mask rgba-black-light"></div>
     			</div>
-    			<div class="carousel-caption">
-    				<a class="align-items-center" href="<?php the_permalink() ?>"><h3 class="h3-responsive"><?php the_title(); ?></h3>
-    				<p><?php echo substr(get_the_excerpt(), 0, 100).'[...]'; ?></p></a>
+    			<div class="carousel-caption align-self-center">
+    				<a class="d-block" href="<?php the_permalink() ?>">
+                        <h3 class="h3-responsive"><?php the_title(); ?></h3>
+    				    <p><?php echo substr(get_the_excerpt(), 0, 100).'[...]'; ?></p>
+                    </a>
     			</div>
     		</div>
             <?php $postCount++; ?>

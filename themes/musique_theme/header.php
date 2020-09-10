@@ -12,7 +12,7 @@
   <?php wp_body_open(); ?>
 
   <nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top" role="navigation">
-    <a class="navbar-brand" href="<?php echo get_option('home'); ?>/"><i class="fa fa-headphones fa-2x"></i> AlloMusic</a>
+    <a class="navbar-brand d-flex align-items-center" href="<?php echo get_option('home'); ?>/"><i class="fa fa-headphones fa-2x mr-2"></i><span>AlloMusic</span></a>
 
     <!-- Boutton en responsive  -->
     <button class="navbar-toggler" data-toggle="collapse" data-target="#header-menu">

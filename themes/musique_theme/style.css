@@ -12,13 +12,11 @@ Author URI: https://musique.com
 	height: 4rem;
 }
 
-.card-intro {
-	margin-top: 67px;
-}
-
 .card-intro .card-body {
 	border-radius: 0 !important;
 }
+
+
 
 .main-title {
 	position: relative;
@@ -28,6 +26,8 @@ Author URI: https://musique.com
 	overflow: hidden;
 	background: linear-gradient(to right, yellow, yellow 50%, white 50%);
 	background-clip: text;
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 	color: transparent!important;
 	background-size: 200% 100%;
 	background-position: 100%;
@@ -39,12 +39,8 @@ Author URI: https://musique.com
 	background-position: 0 100%;
 }
 
-.navbar-brand img {
-	height: 20px;
-}
-
 body {
-	padding-top: 68px;
+	padding-top: 56px;
 }
 
 .card-avatar img {
@@ -53,6 +49,17 @@ body {
 
 .admin-bar .navbar {
 	top: 32px;
+}
+
+#wpadminbar {
+	position: fixed;
+	top: 0;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .navbar {
+    top: 46px;
+  }
 }
 
 /* Front page */
@@ -65,9 +72,8 @@ body {
 }
 
 .carousel-caption {
-	top: 35%;
-	bottom: 35%;
 	transition: transform 0.5s ease;
+	z-index: 15;
 }
 
 .carousel-caption:hover {
@@ -263,11 +269,6 @@ body {
 
 .contact form p label,.contact form p label input, .contact form p label textarea {
 	width: 100%;
-}
-
-.waves-input-wrapper {
-	width: 100%;
-	text-align: center;
 }
 
 .waves-input-wrapper span.ajax-loader {

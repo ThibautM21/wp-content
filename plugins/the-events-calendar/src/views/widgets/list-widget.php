@@ -33,9 +33,9 @@ echo count($posts);
 
 // Check if any event posts are found.
 if ( $posts ) : ?>
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center row">
  <?php for ( $i = 0; $i < ceil(count($posts)/4); $i++): ?>
-	<ol class="tribe-list-widget">
+	<ol class="tribe-list-widget col-md-6 col-12 ml-md-0 ml-5">
 		<?php
 		// Setup the post data for each event.
 		foreach (array_slice($posts, $i*4, 4) as $post ):

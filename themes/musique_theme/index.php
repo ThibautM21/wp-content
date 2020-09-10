@@ -1,14 +1,11 @@
-<?php  get_header();
-// require_once('components/navbar.inc.php'); ?>
+<?php  get_header(); ?>
 
 <header class="container-fluid">
-    <div class="card card-intro bg-dark mb-4">
+    <div class="row card card-intro bg-dark mb-4">
         <div class="card-body white-text rgba-black-light text-center pt-5 pb-0 px-0">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-                    <a href="<?php echo home_url( '/' ); ?>" class="main-title"><h1 class="font-weight-bold mb-4 d-flex align-items-center justify-content-center"><i class="fa fa-headphones fa-2x mr-2"></i><span>AlloMusic</span></h1></a>
-                </div>
-            </div>
+        	<div class="col-12 text-center">
+        		<a href="<?php echo home_url( '/' ); ?>" class="main-title"><h1 class="font-weight-bold mb-4 d-flex align-items-center justify-content-center"><i class="fa fa-headphones fa-2x mr-2"></i><span>AlloMusic</span></h1></a>
+        	</div>
             <div id="slider" class="w-100 mx-auto">
                 <?php get_template_part('components/slider.inc', NULL, array('category_name' => 'actualites', 'posts_per_page' => 5)); ?>
             </div>
@@ -17,9 +14,6 @@
 </header>
 
 <main class="container-fluid">
-	<section>
-		<div id="dynamic-content"></div>
-	</section>
 
 	<section class="container">
 		<div class="row">
