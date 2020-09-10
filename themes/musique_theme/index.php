@@ -6,11 +6,7 @@
         <div class="card-body white-text rgba-black-light text-center pt-5 pb-4 px-0">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
-                    <h1 class="font-weight-bold mb-4">Musique</h1>
-                    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ad impedit corporis ratione facere?
-                        Cupiditate unde aliquid reiciendis animi, quas inventore, praesentium neque voluptatem, iusto
-                        perferendis placeat similique dolor eum?
-                    </p>
+                    <h1 class="font-weight-bold mb-4 d-flex align-items-center justify-content-center"><i class="fa fa-headphones fa-2x mr-2"></i><span>AlloMusic</span></h1>
                 </div>
             </div>
             <div id="slider" class="w-100 mx-auto">
