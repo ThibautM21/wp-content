@@ -6,34 +6,49 @@ Version: 1.0.0
 Author: Nous
 Author URI: https://musique.com
 */
-.page-footer {
-  background-color: #114A7C; }
-
-.blue-gradient {
-  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
-  background: -o-linear-gradient(50deg, #45cafc, #303f9f) !important;
-  background: linear-gradient(40deg, #45cafc, #303f9f) !important; }
 
 .card-comments img {
-  width: 4rem;
-  height: 4rem;}
+	width: 4rem;
+	height: 4rem;
+}
 
 .card-intro {
-  margin-top: 67px;
+	margin-top: 67px;
 }
 
 .card-intro .card-body {
-    border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.main-title {
+	position: relative;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 800;
+	overflow: hidden;
+	background: linear-gradient(to right, yellow, yellow 50%, white 50%);
+	background-clip: text;
+	color: transparent!important;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: all 500ms ease-in-out!important;
+	text-decoration: none!important;
+}
+
+.main-title:hover {
+	background-position: 0 100%;
 }
 
 .navbar-brand img {
-  height: 20px; }
+	height: 20px;
+}
 
-.pagination .page-item.active .page-link {
-  background-color: #09c; }
+/*.pagination .page-item.active .page-link {
+	background-color: #09c;
+}*/
 
 .card-avatar img {
-  width: 100px;
+	width: 100px;
 }
 
 .admin-bar .navbar {
@@ -42,46 +57,51 @@ Author URI: https://musique.com
 
 /* Front page */
 .carousel-inner, .carousel-item {
-  max-height: 400px;
+	max-height: 400px;
 }
 
 .carousel-item {
-  position: static;
+	position: static;
 }
 
 .carousel-caption {
-  top: 35%;
-  bottom: 35%;
+	top: 35%;
+	bottom: 35%;
+	transition: transform 0.5s ease;
+}
+
+.carousel-caption:hover {
+	transform: scale(1.1);
 }
 
 .card-index {
-  height: 600px;
+	height: 600px;
 }
 
 .card-index a {
-  color: #212121;
+	color: #212121;
 }
 
 .widget_recent_entries ul {
-  padding-left: 0;
-  margin: 0;
+	padding-left: 0;
+	margin: 0;
 }
 
 .widget_recent_entries ul li {
-  list-style: none;
-  width: 100%;
-  background-color: #212121;
-  margin: 5px 0;
-  padding: 2px;
+	list-style: none;
+	width: 100%;
+	background-color: #212121;
+	margin: 5px 0;
+	padding: 2px;
 }
 
 .widget_recent_entries ul li a {
-  color: white;
+	color: white;
 }
 
 .video-player {
-  padding: 20px;
-  display: flex;
+	padding: 20px;
+	display: flex;
 }
 
 .video_frame_left, .video_frame_right {
@@ -241,7 +261,7 @@ Author URI: https://musique.com
 	align-items: center;
 }
 
-.contact form p label,.contact form p label input {
+.contact form p label,.contact form p label input, .contact form p label textarea {
 	width: 100%;
 }
 

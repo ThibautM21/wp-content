@@ -12,4 +12,5 @@ $(function () {
 
 	$(window).on('load', setHeight);
 	$(window).on('resize', setHeight);
+
 });
