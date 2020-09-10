@@ -29,6 +29,10 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 function mdbtheme_setup() {
     // Add featured image support
     add_theme_support('post-thumbnails');
+    add_theme_support('menus');
+    register_nav_menu('header_menu', "Menu du header");
+    register_nav_menu('footer', 'Pied de page');
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action('after_setup_theme', 'mdbtheme_setup');
 
@@ -75,5 +79,4 @@ function add_oembed_soundcloud(){
     wp_oembed_add_provider( 'http://soundcloud.com/*', 'http://soundcloud.com/oembed' );
 }
 add_action('init','add_oembed_soundcloud');
-
 ?>

@@ -8,41 +8,34 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/navbar.css" type="text/css">
     <title>
-        <?php bloginfo('name'); ?>
+        <?php wp_title() ?>
     </title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
     <?php wp_body_open(); ?>
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark sticky-top">
-      <div class="container-fluid">
-        <div class="navbar-brand"><i class="fa fa-headphones fa-2x"></i> AlloMusic</div>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top" role="navigation">
+      <div class="navbar-brand"><i class="fa fa-headphones fa-2x"></i> AlloMusic</div>
 
-        <!-- Boutton en responsive  -->
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarText">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Boutton en responsive  -->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- LES LIENS -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarText">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Actualités</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Tendances</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Avis</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Vidéos</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Evénements</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- LES LIENS -->
+      <?php
+      wp_nav_menu(array(
+        'theme_location'    => 'header_menu',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse justify-content-center',
+        'container_id'      => 'header-menu',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker(),
+      ));
+
+      ?>
+
     </nav>
