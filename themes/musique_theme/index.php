@@ -1,7 +1,7 @@
 <?php  get_header();
 // require_once('components/navbar.inc.php'); ?>
 
-<header>
+<header class="container-fluid">
     <div class="card card-intro bg-dark mb-4">
         <div class="card-body white-text rgba-black-light text-center pt-5 pb-0 px-0">
             <div class="row d-flex justify-content-center">
