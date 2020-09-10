@@ -134,7 +134,7 @@ Author URI: https://musique.com
 	background-color: white;
 	z-index: 10;
 	position: relative;
-	margin-right: 10px;
+	padding-right: 20px;
 }
 
 .video_title {
