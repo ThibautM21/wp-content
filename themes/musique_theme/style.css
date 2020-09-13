@@ -89,20 +89,25 @@ body {
 }
 
 .widget_recent_entries ul {
-	padding-left: 0;
+	/*padding-left: 0;*/
 	margin: 0;
 }
 
 .widget_recent_entries ul li {
-	list-style: none;
+	/*list-style: none;*/
 	width: 100%;
-	background-color: #212121;
+	/*background-color: #212121;*/
 	margin: 5px 0;
 	padding: 2px;
 }
 
 .widget_recent_entries ul li a {
-	color: white;
+	color:#007bff;
+	background-color: white;
+}
+
+.widget_recent_entries ul li a:hover{
+	color:#0056b3;
 }
 
 .video-player {

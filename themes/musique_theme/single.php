@@ -1,5 +1,5 @@
 <?php  get_header(); 
-require_once('components/navbar.inc.php'); 
+
 if ( have_posts() ) {
 while ( have_posts() ) {
 the_post();
@@ -57,7 +57,7 @@ the_post();
                     ?>
                     <ol class="breadcrumb white z-depth-1">
                         <li class="breadcrumb-item">
-                            <a href="<?php echo get_home_url(); ?>">Home Page</a>
+                            <a href="<?php echo get_home_url(); ?>">Accueil</a>
                         </li>
                         <?php
                         if (count($categories)){
@@ -99,11 +99,11 @@ the_post();
 
                         <!-- Card header -->
                         <div class="card-header font-weight-bold">
-                            <span>About author</span>
-                            <span class="pull-right">
+                            <span>À propos de l'auteur</span>
+                            <span class="pull-right text-dark">
                                 <a href="" class="mr-3">
                                     <i class="fa fa-envelope mr-1"></i>
-                                    Send message
+                                    Envoyer un message
                                 </a>
                                 <a href="">
                                     <i class="fa fa-facebook mr-2"></i>
@@ -113,9 +113,6 @@ the_post();
                                 </a>
                                 <a href="">
                                     <i class="fa fa-instagram mr-2"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa fa-linkedin mr-2"></i>
                                 </a>
                             </span>
                         </div>
@@ -159,9 +156,9 @@ the_post();
                         <!--Section: Dynamic Content Wrapper-->
 
                         <!--Sidebar-->
-                            <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+                           <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
                             <?php dynamic_sidebar( 'sidebar' ); ?>
-                            <?php endif; ?>
+                            <?php endif; ?> 
                         <!--/.Sidebar-->
 
                     </div>

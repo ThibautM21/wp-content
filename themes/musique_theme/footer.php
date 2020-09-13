@@ -28,7 +28,7 @@
 				<li><a href="#">À propos de nous</a></li>
 				<li><a href="#">Conditions d'utilisation</a></li>
 				<li><a href="#">Confidentialité</a></li>
-				<li><a href="#">Nous contacter</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/index.php/contact/">Nous contacter</a></li>
 			</ul>
 		</div>
 	</div>

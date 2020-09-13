@@ -88,14 +88,14 @@
                                                 'author' =>'
 
                                                 <!-- Name -->
-                                                <label for="name">'. __( 'Your name' ) . ( $req ? '<span class="required">*</span>' : '' )  .' </label>
+                                                <label for="name">'. __( 'Votre nom' ) . ( $req ? '<span class="required">*</span>' : '' )  .' </label>
                                                 <input type="text" id="author" name="author" class="form-control" value="' .
                                                     esc_attr( $commenter['comment_author'] ) . '" '. $aria_req . '>
                                                 ',
                                                     
                                                 'email'  => '
                                                 <!-- Email -->
-                                                <label for="email">'. __( 'Your email', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ). '</label>
+                                                <label for="email">'. __( 'Votre adresse électronique ', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ). '</label>
                                                 <input type="text" id="email" name="email" class="form-control" ' . $aria_req .' value="' . esc_attr(  $commenter['comment_author_email'] ) .
                                                     '">
                                                 '
@@ -115,7 +115,7 @@
 
                                                                     <!-- Comment -->
                                                                     <div class="form-group">
-                                                                        <label for="comment">Your comment</label>
+                                                                        <label for="comment">Votre commentaire</label>
                                                                         <textarea id="comment" name="comment" type="text"  class="form-control" rows="5"></textarea>
                                                                     </div>
 
@@ -127,7 +127,7 @@
                                                             <!--/.Third row-->': ' 
                                                             <!-- Comment -->
                                                             <div class="form-group">
-                                                                <label for="comment">Your comment</label>
+                                                                <label for="comment">Votre commentaire</label>
                                                                 <textarea id="comment" name="comment" type="text"  class="form-control" rows="5"></textarea>
                                                             </div>'),
                                            'comment_notes_after' => '',
@@ -140,13 +140,13 @@
                                                             ) . ')</p>  ',
                                             'title_reply' => '',
                                             'class_submit' => 'btn btn-info btn-md ',
-                                            'label_submit' => 'post ' 
+                                            'label_submit' => 'Envoyer ' 
 
                                        );
                                         ?>
                                         <!--Leave a reply section-->
                                         <div class="card mb-3 wow fadeIn">
-                                            <div class="card-header font-weight-bold">Leave a reply</div>
+                                            <div class="card-header font-weight-bold">Laisser un commentaire</div>
                                             <div class="card-body">
 
                                             <?php 
