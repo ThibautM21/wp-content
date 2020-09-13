@@ -37,7 +37,7 @@ class SMT_VideoFeed extends WP_Widget
 		<div class="videos border border-light">
 			<?php echo $args['before_widget']?>
 			<div class="row">
-				<div class="video-player p-5">
+				<div class="video-player p-5 align-items-center">
 					<?php preg_match('/youtube.com\/watch\?v=(.*)/', $videos[0]['url'], $matches);?>
 					<div class="video_frame_left">
 						<iframe src="https://www.youtube.com/embed/<?= $matches[1] ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -21,6 +21,27 @@ Author URI: https://musique.com
 	filter: blur(2px);
 }
 
+blockquote, .wp-block-pullquote {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.wp-block-image {
+	margin-bottom: 20px;
+}
+
+.post-content {
+	text-align: justify;
+}
+
+.wp-block-embed {
+	text-align: center;
+}
+
+.twitter-tweet {
+	margin: auto;
+}
+
 .main-title {
 	position: relative;
 	display: inline-block;
