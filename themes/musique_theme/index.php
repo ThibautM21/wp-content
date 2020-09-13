@@ -13,7 +13,7 @@
     </div>
 </header>
 
-<main class="container-fluid">
+<main class="container-fluid p-0">
 
 	<section class="container">
 		<div class="row">

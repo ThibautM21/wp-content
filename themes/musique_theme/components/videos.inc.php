@@ -30,7 +30,7 @@ class SMT_VideoFeed extends WP_Widget
 
 					$content = get_post()->post_content;
 					preg_match('/(https:\/\/www\.youtube\.com\/.*)","type/', $content, $matches);
-					$videos[] = ['title' => get_the_title(), 'url' => $matches[1]];
+					$videos[] = ['title' => get_the_title(), 'url' => $matches[1], 'article' => get_the_permalink()];
 				}
 			}
 		} ?>
@@ -50,7 +50,7 @@ class SMT_VideoFeed extends WP_Widget
 								<?php preg_match('/youtube.com\/watch\?v=(.*)/', $video['url'], $matches);?>
 								<li class="video_list">
 									<div class="mb-2">
-										<a class="d-flex align-items-center" href="<?php echo $video['url']; ?>" target="_blank">
+										<a class="d-flex align-items-center" href="<?php echo $video['article']; ?>" target="_blank">
 											<div class="crop m-0"><img src="<?php echo 'http://img.youtube.com/vi/'.$matches[1].'/0.jpg'; ?>" />
 											</div>
 											<p class="video_title"><?=$video['title']?></p>
