@@ -11,9 +11,9 @@ Template Name: Page d'archives
 
 <section class="text-center container">
 		<h2 class="cat-title my-4"><?php the_title(); ?></h2>
-		<div class="row wow fadeIn">
-	<?php if ($the_query->have_posts()): $counter = 1; while ($the_query->have_posts()): $the_query->the_post(); ?>
-		<div class="col-lg-4 col-12 mb-4 p-2">
+	<?php if ($the_query->have_posts()): while ($the_query->have_posts()): $the_query->the_post(); ?>
+		<div class="row wow fadeIn justify-content-center">
+		<div class="col-8 mb-4 p-3">
 			<div class="card card-cascade card-index">
 				<div class="view view-cascade overlay hm-white-slight mb-4">
 					<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'img-fluid card-img-top')); ?>
@@ -25,7 +25,7 @@ Template Name: Page d'archives
 					<h4 class="card-title"><strong><a href="<?php echo get_permalink(); ?>" class="text-dark"><?php the_title(); ?></a></strong></h4>
 					<h6 class="font-weight-bold py-2"><i class="fa fa-tags mr-1"></i><?php the_category(', '); ?></h6>
 					<p class="card-text grey-text">
-						<?php echo substr(get_the_excerpt(), 0, 120); ?>
+						<?php the_excerpt(); ?>
 					</p>
 					<a href="<?php echo get_permalink() ?>" class="btn btn-dark btn-rounded btn-md">En savoir plus</a>
 				</div>
@@ -36,12 +36,7 @@ Template Name: Page d'archives
 				</div>
 			</div>
 		</div>
-	<?php if ($counter % 3 == 0):?>
-		</div>
-		<div class="row wow fadeIn">
-	<?php endif; ?>
-
-	<?php $counter++; ?>
+	</div>
 	<?php endwhile; endif; ?>
 </div>
 

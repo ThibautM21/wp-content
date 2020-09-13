@@ -52,7 +52,7 @@
 	<section class="text-center container">
 		<div class="row justify-content-center">
 			<h2 class="cat-title my-4">Derniers avis</h2>
-			<?php get_template_part('components/category.inc', NULL, array('category_name' => 'avis', 'posts_per_page' => 8)); ?>
+			<?php get_template_part('components/category.inc', NULL, array('category_name' => 'avis', 'posts_per_page' => 4)); ?>
 		</div>
 	</section>
 	<hr>

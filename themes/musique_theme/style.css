@@ -114,6 +114,16 @@ body {
 	width: 50%;
 }
 
+@media (max-width: 992px) {
+	.video-player {
+		flex-direction: column;
+	}
+
+	.video_frame_left, .video_frame_right {
+		width: 100%;
+	}
+}
+
 .video_frame_left iframe {
 	width: 100%;
 	min-height: 360px;
